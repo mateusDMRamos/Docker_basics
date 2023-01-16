@@ -25,6 +25,5 @@ services:
       - todoback
     networks:
       - rede-01
-
 networks:
   rede-01:

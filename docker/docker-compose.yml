@@ -1,7 +1,7 @@
 version: "3"
 services:
   todofront:
-    build: ./todo-app/front-end
+    image: todofrontend
     ports:
       - 3000:3000
     environment:
@@ -11,13 +11,13 @@ services:
     networks:
       - rede-01
   todoback:
-    build: ./todo-app/back-end
+    image: todobackend
     ports:
       - 3001:3001
     networks:
       - rede-01
   todotests:
-    build: ./todo-app/tests
+    image: todotests
     environment:
       - FRONT_HOST=todofront
     depends_on:
